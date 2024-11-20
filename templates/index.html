@@ -3,20 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Assistant de cours. </title>
+    <title> Policy LLM. </title>
     <style>
         body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            background: linear-gradient(to right, #4568dc, #b06ab3);
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    background: linear-gradient(to right, #808080, #000000); /* Gradient from grey to black */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
         .chat-container { 
             width: 90%; 
             max-width: 800px; 
@@ -123,18 +122,18 @@
 </head>
 <body>
     <div class="entete-info">
-        Ceci est un projet de recherche experimentale mené dans le cadre de mes études doctorales. Le projet cherche à tester les assistants basés sur la technologie de l'intelligence artificielle pour différents types de taches comme assister des cours ou écrire des notes de breffage.
+        This is a follow up project to this paper: https://rdcu.be/dYDBq.
     </div>
     <div class="chat-container">
-        <div class="chat-header">Assistant IA pour les cours ENP7350 - Méthodes de recherche et d'intervention & ENP7351 - Méthodes de recherche et analyse de données à l'ÉNAP</div>
+        <div class="chat-header">This is a follow up project to this paper: https://rdcu.be/dYDBq</div>
         <div class="chat-box" id="chat-box"></div>
         <div class="chat-input-container">
-            <input type="text" id="chat-input" class="chat-input" placeholder="Je suis un assistant IA pour aider les étudiants avec ENP7350 & ENP7351!" aria-label="Chat input">
-            <button class="send-button" id="send-button" aria-label="Send message">Envoyer</button>
+            <input type="text" id="chat-input" class="chat-input" placeholder="I am an LLM being fintuned for policy expertise!" aria-label="Chat input">
+            <button class="send-button" id="send-button" aria-label="Send message">Send</button>
         </div>
     </div>
     <div class="contact-info">
-        Pour voir mes récentes publications, visitez ma page:  <a href="https://scholar.google.com/citations?user=aAI6Wf8AAAAJ&hl=en&oi=ao" style="color: #ffffff; text-decoration: underline;">Google Scholar</a> Pour toute question ou assistance, contactez-moi à <a href="mailto:Stany.Nzobonimpa@enap.ca" style="color: #ffffff; text-decoration: underline;">Stany.Nzobonimpa@enap.ca</a>
+        To see my recent publications, please visit my Google Scholar page:  <a href="https://scholar.google.com/citations?user=aAI6Wf8AAAAJ&hl=en&oi=ao" style="color: #ffffff; text-decoration: underline;">Google Scholar</a> Pour toute question ou assistance, contactez-moi à <a href="mailto:Stany.Nzobonimpa@enap.ca" style="color: #ffffff; text-decoration: underline;">Stany.Nzobonimpa@enap.ca</a>
     </div>
     <script>
         const chatInput = document.getElementById('chat-input');
