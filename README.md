@@ -3,4 +3,4 @@ This is a follow up project to this paper: [Automating public policy: a comparat
 We are finetuning a specialized AI agent for advanced policy work. The question we are answering is: can finetuning improve model reliability for policy-related work? A follow-up academic paper is also being drafted and has been accepted for presentation at the 7th Annual Conference of the International Association of Public Policy Association. The conference will be cohosted by Chiang Mai University School of Public Policy, from July 2 to 4, 2025, with a Pre-Conference scheduled for July 1, 2025. Note this project is deployed on Heroku and the resulting AI model can be found [here](http://34.118.139.222/). This project has been selected for presentation at the [2025 ICCP Conference](https://www.ippapublicpolicy.org/conference/icpp7-chiang-mai-2025/21)
 
 # Availability of our finetuned model
-The resulting finetuned GenAI model can be quried [here](http://34.118.139.222/)
+The resulting finetuned GenAI model can be quried [here](http://34.118.169.86/)
