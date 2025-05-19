@@ -1,3 +1,11 @@
+"""
+Note: As of May 2025, we have suitched to using the Open WebUI as our main interface. 
+The proposed Heroku app has been discontinued and our model can now be accessed at: http://34.118.169.86/
+The ReadMe file contains more information on the approach. You can contact me: Stany.Nzobonimpa at enap.ca if you have questions.
+
+"""
+
+
 from flask import Flask, render_template, request, jsonify
 import openai
 import os
