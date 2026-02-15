@@ -1,0 +1,2 @@
+# Development and CI: install with pip install -r requirements.txt -r requirements-dev.txt
+ruff>=0.1.0

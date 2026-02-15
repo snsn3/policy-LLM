@@ -7,7 +7,7 @@
     <style>
         body { 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-    background: linear-gradient(to right, #FFFFFF, #D3D3D3); /* Gradient from darker grey to black */
+    background: linear-gradient(to right, #FFFFFF, #D3D3D3);
     margin: 0;
     padding: 0;
     display: flex;
@@ -142,10 +142,16 @@
         const chatBox = document.getElementById('chat-box');
         const sendButton = document.getElementById('send-button');
 
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
         function addMessage(content, sender) {
             const messageElement = document.createElement('div');
             messageElement.classList.add('chat-message');
-            messageElement.innerHTML = `<strong>${sender}:</strong> ${content}`;
+            messageElement.innerHTML = '<strong>' + escapeHtml(sender) + ':</strong> ' + escapeHtml(content);
             chatBox.appendChild(messageElement);
             chatBox.scrollTop = chatBox.scrollHeight;
         }
@@ -164,12 +170,15 @@
                     },
                     body: JSON.stringify({ message: userInput })
                 })
-                .then(response => response.json())
-                .then(data => {
-                    addMessage(data.reply, 'Assistant IA');
+                .then(response => {
+                    return response.json().then(data => ({ ok: response.ok, status: response.status, data }));
                 })
-                .catch(error => {
-                    addMessage('Désolé, une erreur est survenue.', 'Assistant IA');
+                .then(({ ok, data }) => {
+                    const msg = (data && data.error) ? String(data.error) : ((data && data.reply != null) ? String(data.reply) : '');
+                    addMessage(ok ? (msg || 'No response received.') : (msg || 'Sorry, something went wrong. Please try again.'), 'Assistant');
+                })
+                .catch(() => {
+                    addMessage('Sorry, something went wrong. Please try again.', 'Assistant');
                 });
             }
         }

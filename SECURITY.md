@@ -1,6 +1,6 @@
 # Security
 
-If you discover a security vulnerability in this project, please report it responsibly.
+We take security seriously. If you discover a security vulnerability in this project, please report it responsibly.
 
 **Do not** open a public issue for security-sensitive problems.
 

@@ -18,11 +18,17 @@ As of May 2025, the primary interface is Open WebUI; the legacy Heroku/Flask dem
 
 ```
 policy-LLM-1/
-├── app.py              # Flask app (legacy chat interface)
-├── templates/          # HTML templates for the legacy UI
-├── requirements.txt   # Python dependencies
-├── Procfile            # Process definition (e.g. Heroku)
-├── runtime.txt        # Python version
+├── app.py                 # Flask app (legacy chat interface)
+├── templates/             # HTML templates for the legacy UI
+├── requirements.txt       # Python dependencies
+├── requirements-dev.txt   # Dev tools (e.g. linting)
+├── .env.example           # Example env vars (copy to .env)
+├── Procfile               # Process definition (e.g. Heroku)
+├── runtime.txt            # Python version
+├── .github/workflows/     # CI (lint, import check)
+├── CONTRIBUTING.md
+├── SECURITY.md
+├── LICENSE
 └── README.md
 ```
 
@@ -34,7 +40,7 @@ For local development or reference:
 python -m venv venv
 source venv/bin/activate   # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
-export OPENAI_API_KEY=your_key_here
+export OPENAI_API_KEY=your_key_here   # or copy .env.example to .env and set the key
 python app.py
 ```
 
